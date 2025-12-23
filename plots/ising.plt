@@ -10,9 +10,7 @@ set xlabel "T"
 set ylabel "<E>/N"
 set grid
 set key top left
-# В Windows путь в переменной file может содержать обратные слэши,
-# поэтому имя вида "E_\<path>.png" создаёт несуществующую папку "E_<...>".
-# Вместо этого сохраняем файлы рядом с CSV: "<file>_E.png", "<file>_C.png", "<file>_M.png".
+
 set output sprintf("%s_E.png", file)
 plot file using 1:2 with lines lw 2 title "U(T)"
 
