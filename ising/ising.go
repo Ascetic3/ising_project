@@ -39,7 +39,7 @@ func pbc(x, L int) int {
 }
 
 // calcParameters считает полную энергию и намагниченность решётки.
-// Формулы совпадают с исходной реализацией.
+
 func calcParameters(lattice array2d, L int, J, h float64, energy, moment *float64) {
 	*energy = 0
 	*moment = 0
@@ -70,7 +70,7 @@ func mcStep(lattice array2d, L int, J, h, T float64, x, y int) {
 	}
 }
 
-// nextStep выполняет один "маятник" — N случайных попыток флипнуть спин.
+// nextStep выполняет один "маятник" — N случайных попыток 
 func nextStep(lattice array2d, L int, J, h, T float64) {
 	N := L * L
 	for i := 0; i < N; i++ {
